@@ -2,7 +2,7 @@ let loginuser = function (oauth) {
 
    $.ajax({
         type: "POST",
-        url: 'http://192.168.0.100' + oauth.data.oauth,
+        url: 'http://verticals.craos.net' + oauth.data.oauth,
         dataType: "json",
         success: function (response) {
             userinfo(oauth)
@@ -22,7 +22,7 @@ let userinfo = function (oauth) {
 
     $.ajax({
         type: "GET",
-        url: 'http://192.168.0.100' + oauth.data.info + $("#usuario").val(),
+        url: 'http://verticals.craos.net' + oauth.data.info + $("#usuario").val(),
         dataType: "json",
         success: function (response) {
             $("#progresslogin").css("display", "none");
@@ -53,7 +53,7 @@ let obtemavatar = function (userinfo, callback) {
 
     $.ajax({
         type: "POST",
-        url: "http://192.168.0.100/liteapi/auth/avatar",
+        url: "http://verticals.craos.net/liteapi/auth/avatar",
         dataType: "json",
         success: function (response) {
             callback(response.data);

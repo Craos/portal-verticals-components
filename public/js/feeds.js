@@ -55,7 +55,7 @@ Promise.all([
 
         $.ajax({
             type: "POST",
-            url: "http://192.168.0.100/liteapi/auth/access",
+            url: "http://verticals.craos.net/liteapi/auth/access",
             dataType: "json",
             success: loginuser,
             data: {

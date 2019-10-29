@@ -31,7 +31,15 @@ html, body {
 avisonavmobile{
     display: none;
 }
+
+#menu-flutuante {
+    display: none;
+}
+
 @media only screen and (max-width: 550px) {
+    #menu-flutuante{
+        display: block;
+    }
     #avisonavmobile{
      display: ;
     }
@@ -724,3 +732,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+.fontsizemenu{
+    font-size: 14px;
+}
+
+/*Fim*/
+
+
+
+/*Material design*/
+
+

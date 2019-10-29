@@ -38,37 +38,63 @@
     <nav id="navegation-bar"></nav>
     <div class="nav-space"></div>
 
-    <!-- Coluna esquerda - Menus e outros -->
-
-    <div class="row">
-        <div class="col s12 m4 l2 marginesquerda" id="mobileoff" style="margin-top: 1em">
-            <div id="menu"></div>
-        </div>
-
     <!-- Coluna Central - Postagens e outros -->
 
-    <div class="col s12 m4 l7" style="margin-top: 1em">
-        <div class="row">
-            <div class="col s12">
-                <div class="card-panel white border-bottom">
-                    <span class="black-text"><i class="fas fa-bell blue-text" style="font-size: 16px;"> </i><b> Ative as notificações e fique por dentro de todos as novidades sobre seu Condominio! </b></span>
-                    <span class="grey-text">Caso ainda não saiba como ativar as notificações, <a>clique aqui.</a></span>
+    <div class="col s6 m4" style="margin-top: 1em">
+
+        <div class="container" id="dev">
+
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-button btn' href='#' data-activates='dropdown-opcoesprincipais'>Menu test</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown-opcoesprincipais' class='dropdown-content' style="margin-top: 2.5rem;">
+                <li><a class="modal-trigger fontsizemenu" href="#minhaunidade" style="color: #696969; font-size: 15px;"><i class="material-icons">home</i>Minha Unidade</a></li>
+                <li><a href="#ajuda" style="color: #696969; font-size: 15px;"><i class="material-icons">help_outline</i>Ajuda</a></li>
+                <div style="margin-top: 10px;">
+                <li class="divider"></li>
+                <li ><a href="#ajustes" style="color: #696969; font-size: 15px;"><i class="material-icons">build</i>Ajustes</a></li>
                 </div>
+            </ul>
+
+
+            <!-- Modal Structure -->
+            <div id="minhaunidade" class="modal">
+                <div class="modal-content">
+                <h5>Minha Unidade</h5>
+                    <p style="margin-top: -5px;"><label>Algumas opções destinadas a sua Unidade. </label></p>
+                    <div class="divider"></div>
+                    <ul class="collection">
+                        <a href="#!" class="collection-item avatar">
+                            <i class="material-icons circle blue">person_add</i>
+                            <span class="title">Cadastro de Pessoas</span>
+                            <p><label>Realize cadastro de novos Moradores e/ou Visitantes em sua Unidade.</label><br></p>
+                        </a>
+                        <div class="divider"></div>
+                        <a href="#!" class="collection-item avatar">
+                            <i class="material-icons circle blue">time_to_leave</i>
+                            <span class="title">Veículos</span>
+                            <p><label>Declare os veículos de sua unidade.</label><br></p>
+                        </a>
+                        <div class="divider"></div>
+                        <a href="#!" class="collection-item avatar">
+                            <i class="material-icons circle blue">pets</i>
+                            <span class="title">Pets</span>
+                            <p><label>Registre os Pets de sua Unidade.</label><br></p>
+                        </a>
+<!--                        <a href="#!" class="collection-item center-align center">-->
+<!--                            <span class="title">Ver mais...</span>-->
+<!--                        </a>-->
+                    </ul>
             </div>
+
         </div>
-
-        <div id="postagens-artigos"></div>
     </div>
 
-    <!-- Artigos recentes -->
-
-    <div class="col s12 m4 l3" id="recentes" style="margin-top: 1em">
     </div>
 
-    <!-- Direitos Autorais ©  -->
-
-    <div class="col s12 m4 l3" id="bycraos">
-    </div>
-    </div>
+<script>
+    $('.dropdown-trigger').dropdown();
+</script>
 </body>
 </html>
