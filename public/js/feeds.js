@@ -9,8 +9,6 @@
 //]
 
 
-
-
 let load = (function() {
 
     function VerticalsPart() {
@@ -62,8 +60,6 @@ Promise.all([
                 service: "auth"
             }
         });
-
-
     };
 
 

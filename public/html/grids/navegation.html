@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verticals | Desenvolvimento</title>
+
 </head>
 <body>
 <script>
@@ -11,7 +12,7 @@
     $(document).ready(function () {
         $('.modal').modal();
     });
-    $('.dropdown-trigger').dropdown();
+
 </script>
 
 <style>
@@ -23,6 +24,8 @@
 <div class="nav-wrapper navtop">
     <a id="brandlogopc"  href="./index.html" class="brand-logo"><img src="./img/logo.png" alt=""/></a>
     <a id="brandlogomobile" href="./index.html" class="brand-logo"><img class="tamanhologo" src="./img/logomobile.png" alt=""/></a>
+
+
 
     <!--📱📱📱📱📱📱📱📱📱📱📱📱📱📱📱📱📱📱-->
     <!-- MENU ESQUERDO - VERSÁO MOBILE -->
@@ -76,7 +79,10 @@
             <li><a href="./financeiro/" class="collection-item"><i class="fas fa-hand-holding-usd tamanhoicones"></i>Financeiro</a>
             </li>
         </ul>
+
+
     </div>
+
 
     <!-- 🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠 -->
     <!-- MENU USUARIO - INFERIOR    -->
@@ -84,18 +90,55 @@
 
     <div data-activates="slide-out" class="right menu-direito-botao">
 
-<!--        <li>-->
-<!--            <a class="dropdown-button" href="#" data-activates="dropdown1">-->
-<!--                <span id="usuario_info" class="tooltipped" data-tooltip="Acessar sua Conta">-->
-<!--                    <i id="user-cicle" class="material-icons tamanhoicones cor-do-menu tamanholi"></i>-->
-<!--                </span>-->
-<!--            </a>-->
-<!--        </li>-->
-
-        <a id="botaologin" class="radius hoverable modal-trigger" href="#loginusuario" style="margin-right: 15px;">
+        <a id="botaologin" class="radius hoverable dropdown-button" href="#loginusuario" data-activates="dropdown-opcoesprincipais" style="margin-right: 15px">
             <span id="usuario_info"></span>
             <i class="fas fa-user-circle menu-direito-botao" id="iconelogin"></i>
         </a>
+
+        <ul id='dropdown-opcoesprincipais' class='dropdown-content' style="margin-top: 35px;">
+            <li><a class="modal-trigger fontsizemenu" href="#minhaunidade" style="color: #696969; font-size: 15px;"><i class="material-icons">home</i>Minha Unidade</a></li>
+            <li>
+                <a href="#ajuda" style="color: #696969; font-size: 15px;">
+                    <i class="material-icons">help_outline</i>Ajuda</a></li>
+            <div style="margin-top: 10px;">
+                <li class="divider"></li>
+                <li ><a href="#ajustes" style="color: #696969; font-size: 15px;"><i class="material-icons">build</i>Ajustes</a></li>
+            </div>
+        </ul>
+
+        <!-- Modal Structure -->
+        <div id="minhaunidade" class="modal">
+            <div class="modal-content">
+                <h5>Minha Unidade</h5>
+                <p style="margin-top: -5px;"><label>Algumas opções destinadas a sua Unidade. </label></p>
+                <div class="divider"></div>
+                <ul class="collection">
+                    <a href="#!" class="collection-item avatar">
+                        <i class="material-icons circle blue">person_add</i>
+                        <span class="title">Cadastro de Pessoas</span>
+                        <p><label>Realize cadastro de novos Moradores e/ou Visitantes em sua Unidade.</label><br></p>
+                    </a>
+                    <div class="divider"></div>
+                    <a href="#!" class="collection-item avatar">
+                        <i class="material-icons circle blue">time_to_leave</i>
+                        <span class="title">Veículos</span>
+                        <p><label>Declare os veículos de sua unidade.</label><br></p>
+                    </a>
+                    <div class="divider"></div>
+                    <a href="#!" class="collection-item avatar">
+                        <i class="material-icons circle blue">pets</i>
+                        <span class="title">Pets</span>
+                        <p><label>Registre os Pets de sua Unidade.</label><br></p>
+                    </a>
+                    <!--                        <a href="#!" class="collection-item center-align center">-->
+                    <!--                            <span class="title">Ver mais...</span>-->
+                    <!--                        </a>-->
+                </ul>
+            </div>
+
+        </div>
+
+
 
         <div id="loginusuario" class="modal modallogin">
             <div class="modal-content">
@@ -248,14 +291,6 @@
             </div>
         </li>
         <li>
-            <div class="iconesnav" id="ajuda" style="margin-right: 10px;">
-                <a href="#!">
-                    <span class="tooltipped" data-tooltip="Ajuda"> <i class="material-icons">notifications</i></span>
-                    <!--<span>Ajuda</span>-->
-                </a>
-            </div>
-        </li>
-        <li>
             <div class="iconesnav hide-on-med-only" id="ajuda" style="margin-right: 10px;">
                 <a href="#!">
                     <span class="tooltipped" data-tooltip="Ajuda"><i
@@ -264,7 +299,12 @@
                 </a>
             </div>
         </li>
+        <li>
+
+        </li>
     </ul>
+
+
 
 </div>
 
@@ -280,6 +320,9 @@
     </ul>
 </div>
 
+<script>$(".dropdown-button").dropdown();
+
+</script>
 
 
 </body>
